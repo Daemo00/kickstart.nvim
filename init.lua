@@ -956,7 +956,7 @@ require('lazy').setup({
       vim.fn['mkdp#util#install']()
     end,
   },
-  { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  { 'akinsho/toggleterm.nvim', version = '*', opts = { open_mapping = [[<c-\>]] } },
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
