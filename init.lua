@@ -84,6 +84,9 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Allow rectangular selection
+vim.opt.virtualedit = 'block'
+
 -- For https://github.com/nvim-tree/nvim-tree.lua
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
