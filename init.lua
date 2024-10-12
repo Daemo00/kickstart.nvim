@@ -962,6 +962,7 @@ require('lazy').setup({
 
   'sindrets/diffview.nvim', -- Diff view
   'tpope/vim-fugitive', -- Git integration
+  'tpope/vim-rhubarb', -- Git integration
   { 'nvim-tree/nvim-tree.lua', opts = {} }, -- File browser
   { -- Markdown preview
     'iamcco/markdown-preview.nvim',
