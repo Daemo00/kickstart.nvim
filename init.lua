@@ -201,6 +201,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Set the working directory to the path of the current buffer.
+vim.keymap.set('n', 'gpd', function()
+  vim.cmd('cd ' .. vim.fn.expand '%:p:h')
+end, { desc = 'Set working directory to path of buffer.' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
