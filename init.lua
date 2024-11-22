@@ -981,8 +981,12 @@ require('lazy').setup({
     end,
   },
   'tpope/vim-fugitive', -- Git integration
-  'tpope/vim-rhubarb', -- Git integration
-  { 'nvim-tree/nvim-tree.lua', opts = {} }, -- File browser
+  'tpope/vim-rhubarb', -- Github integration
+  { 'nvim-tree/nvim-tree.lua', opts = {
+    update_focused_file = {
+      enable = true,
+    },
+  } }, -- File browser
   { -- Markdown preview
     'iamcco/markdown-preview.nvim',
     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
