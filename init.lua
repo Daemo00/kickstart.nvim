@@ -969,6 +969,17 @@ require('lazy').setup({
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   'sindrets/diffview.nvim', -- Diff view
+  { -- Show outline
+    'hedyhli/outline.nvim',
+    config = function()
+      -- Example mapping to toggle outline
+      vim.keymap.set('n', '<leader>o', '<cmd>Outline<CR>', { desc = 'Toggle Outline' })
+
+      require('outline').setup {
+        -- Your setup opts here (leave empty to use defaults)
+      }
+    end,
+  },
   'tpope/vim-fugitive', -- Git integration
   'tpope/vim-rhubarb', -- Git integration
   { 'nvim-tree/nvim-tree.lua', opts = {} }, -- File browser
