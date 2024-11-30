@@ -102,7 +102,42 @@ return {
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
-    dapui.setup()
+    dapui.setup {
+      layouts = {
+        {
+          position = 'left',
+          size = 20,
+          elements = {
+            {
+              id = 'scopes',
+              size = 0.25,
+            },
+            {
+              id = 'stacks',
+              size = 0.25,
+            },
+            {
+              id = 'breakpoints',
+              size = 0.25,
+            },
+            {
+              id = 'watches',
+              size = 0.25,
+            },
+          },
+        },
+        {
+          position = 'bottom',
+          size = 0.25,
+          elements = {
+            {
+              id = 'repl',
+              size = 1,
+            },
+          },
+        },
+      },
+    }
 
     -- Change breakpoint icons
     vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
